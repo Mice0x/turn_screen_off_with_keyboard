@@ -10,8 +10,7 @@ class MonitorController:
         self.keylist = set()
         listener = Listener(on_press=self.on_press, on_release=self.on_release)
         listener.start()
-        while True:
-            pass
+        listener.join()
     def on_press(self,key):
         self.keylist.add(str(key))
         #print(str(key))
