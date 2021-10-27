@@ -16,6 +16,7 @@ class MonitorController:
         #print(str(key))
         #print(self.keylist)
         if self.key1 in self.keylist and self.key2 in self.keylist:
+            time.sleep(0.3)
             windll.user32.PostMessageA(0xffff, 0x0112, 0xf170, 2)
     def on_release(self,key):
         if str(key) in self.keylist:
